@@ -20,8 +20,8 @@ repos:
       pass_filenames: false
 
     # black 
-    - id: isort
-      name: isort
+    - id: black
+      name: black
       entry: black --config ./.black .
       language: system
       types_or: [python, pyi]

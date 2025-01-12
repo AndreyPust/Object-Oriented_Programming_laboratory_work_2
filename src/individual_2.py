@@ -7,6 +7,7 @@
 # длина задается конструктором. Младший индекс соответствует младшей цифре денежной суммы.
 # Младшие две цифры – копейки. (Вариант 25 (4)).
 
+
 class Money:
     MAX_SIZE = 100  # Максимальная длина списка
 
@@ -88,8 +89,8 @@ class Money:
         if self._count < 2:
             return f"0.{''.join(map(str, self.amount[::-1]))} руб."
 
-        rubles = ''.join(map(str, self.amount[2:][::-1])) or '0'
-        kopecks = ''.join(map(str, self.amount[:2][::-1]))
+        rubles = "".join(map(str, self.amount[2:][::-1])) or "0"
+        kopecks = "".join(map(str, self.amount[:2][::-1]))
         return f"{rubles}.{kopecks} руб."
 
 
